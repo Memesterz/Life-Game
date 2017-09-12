@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var swidth = screen.width / 2;
+var sheight = screen.height / 2;
+var MainScreenJS = document.getElementById("MainScreen");
 
+</script>
+
+<title>Game</title>
+	<link rel='stylesheet' href='style.css'/>
+	<script src='script.js'></script>
+</head>
+<body>
+<div id=Stats>
+<p>Hunger</p>
+<p id="HungerJS">100</p>
+<p>Thirst</p>
+<p id="ThirstJS">100</p>
+<p>Money</p>
+<p id="MoneyJS">100</p>
+</div>
+
+<div id="MainScreen">
+<div id="MainScreenShop">
+<input type="BUTTON" id="ShopItem1Fridge" value="Buy a Fridge Cost: 200$ +5 Food And Thirst" onclick="ShopItem1Click()"></input>
+</div>
+
+
+
+<div id="MainScreenMenu">
+<input type="BUTTON" id="Eat" value="Eat Cost 5$" onclick="EatClickJS()"></input>
+
+<input type="BUTTON" id="Drink" value="Drink for 5$" onclick="ThirstClickJS()"></input>
+
+<input type="BUTTON" id="Work" value="Work for 10$ -5 thirst and hunger" onclick="WorkClickJS()"></input>
+</div>
+<div id="ChangeMenu">
+<img src="http://www.newdesignfile.com/postpic/2012/11/black-stick-figure-clip-art_17881.png" id="MainImg"></img>
+<img src="http://www.freeiconspng.com/uploads/job-icon-black-career-case-job-icon-14.png" id="JobImg"></img>
+<img src="http://nationals.org.au/wp-content/uploads/2016/05/Education.png" id="EducationImg"></img>
+<img src="https://cdn1.iconfinder.com/data/icons/social-productivity-line-art-4/128/shopping-cart2-512.png" id="ShopImg" onclick="ChangeMenuSchoolJS()"></img>
+<img src="https://www.ride25.com/wp-content/uploads/2016/02/spanner-bike-fit.png" id="SettingsImg"></img>
+
+</div>
+</div>
+<script>
+var MoneyEditJS = document.getElementById("MoneyJS");
+var FoodEditJS = document.getElementById("HungerJS");
+var ThirstEditJS = document.getElementById("ThirstJS");
+var MSMEditJS = document.getElementById("MainScreenMenu");
+var MSShopEditJS = document.getElementById("MainScreenShop");
+var CostOfFridge = 200;
+var ThirstClickAddAmountJS = 5;
+var EatClickAddAmountJS = 5;
+var TopAmountFoodJS = 100;
+
+
+function WorkClickJS() {
+    if (ThirstEditJS.innerHTML < 5) {
+
+
+} else if (FoodEditJS.innerHTML < 5) {
+    
+    
+} else {
+var AddMoney = +MoneyEditJS.innerHTML + +20;
+MoneyEditJS.innerHTML = AddMoney;
+
+var TakeFood = FoodEditJS.innerHTML - 5;
+FoodEditJS.innerHTML = TakeFood;
+
+var TakeThirst = ThirstEditJS.innerHTML - 5;
+ThirstEditJS.innerHTML = TakeThirst;
+}
+}
+
+function EatClickJS() {
+
+if (MoneyEditJS.innerHTML < 5) {
+    alert("Your out of money");
+
+} else if (FoodEditJS.innerHTML > TopAmountFoodJS) {
+alert("Your Full Hunger");
+}
+
+else {
+var TakeMoney = MoneyEditJS.innerHTML - 5;
+MoneyEditJS.innerHTML = TakeMoney;
+var AddFood = +FoodEditJS.innerHTML + +EatClickAddAmountJS;
+FoodEditJS.innerHTML = AddFood;
+}
+}
+
+function ThirstClickJS() {
+if (ThirstEditJS.innerHTML > 95) {
+alert("Your Full Thirst");
+} else if (MoneyEditJS.innerHTML < 5) {
+alert("Your Out Of Money");
+} else {
+var AddThirst = +ThirstEditJS.innerHTML + +ThirstClickAddAmountJS;
+ThirstEditJS.innerHTML = AddThirst;
+var TakeMoneyT = MoneyEditJS.innerHTML - 5;
+MoneyEditJS.innerHTML = TakeMoneyT;
+}
+}
+</script>
+
+<script>
+function ChangeMenuSchoolJS() {
+
+if (MSMEditJS.style.visibility === "visible") {
+MSMEditJS.style.visibility = "hidden";
+MSShopEditJS.style.visibility = "visible";
+} else {
+MSMEditJS.style.visibility = "visible";
+MSShopEditJS.style.visibility = "hidden";
+}
+
+}
+
+function ShopItem1Click() {
+if (MoneyEditJS.innerHTML > 195) {
+var TakeMoneyItem1 = MoneyEditJS.innerHTML - CostOfFridge;
+MoneyEditJS.innerHTML = TakeMoneyItem1;
+var AddFoodAmount = EatClickAddAmountJS + 5;
+EatClickAddAmountJS = AddFoodAmount;
+
+var ChangeFoodTotal = TopAmountFoodJS - 5;
+TopAmountFoodJS = ChangeFoodTotal;
+
+} else {
+    alert("Not Enough Money");
+}
+}
+
+</script>
+</body>
+</html>
