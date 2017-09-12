@@ -1,0 +1,118 @@
+#MainScreen {
+    margin-left: 450px;
+    width: 517;
+    height: 500;
+    background-color: gray;
+    outline-style: solid;
+}
+#MainScreenShop {
+    visibility: hidden;
+    position: fixed;
+}
+
+#MainScreenMenu {
+    visibility: visible;
+}
+
+#Stats {
+    width: 400px;
+    height: 200px;
+    background-color: gray;
+    outline-style: solid;
+}
+
+#ChangeMenu {
+    width: 517px;
+    height: 100px;
+    position: absolute;
+    margin-top: 400px;
+    outline-style: solid;
+}
+
+#SettingsImg {
+    height: 100px;
+    width: 100px;
+}
+
+#ShopImg {
+    height: 100px;
+    width: 100px;
+}
+
+#EducationImg {
+    height: 100px;
+    width: 100px;
+}
+#JobImg {
+    height: 100px;
+    width: 100px;
+}
+
+#MainImg {
+    height: 100px;
+    width: 100px;
+}
+
+#Eat {
+    width: 517px;
+    height: 50px;
+    background: green;
+    position: absolute;
+    margin-top: 350px;
+}
+
+#Drink {
+    width: 517px;
+    height: 50px;
+    background: green;
+    position: absolute;
+    margin-top: 280px;
+}
+
+#Work {
+    width: 517px;
+    height: 50px;
+    background: green;
+    position: absolute;
+    margin-top: 200px;
+}
+
+#ButtonText {
+    font-size: 20px;
+    text-align: center;
+}
+
+#EatDiv {
+    width: 517px;
+    height: 50px;
+    position: fixed;
+    display: block;
+    margin-top: 350px;
+}
+
+#HungerJS {
+    
+}
+
+#ThirstJS {
+    
+}
+
+#MoneyJS {
+    
+}
+
+#ShopItem1Fridge {
+    width: 517px;
+    height: 50px;
+    background: green;
+    position: absolute;
+    margin-top: 240px;
+}
+
+
+
+
+
+
+
